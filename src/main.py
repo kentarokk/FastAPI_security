@@ -7,5 +7,5 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
 @app.get("/items/")
-async def read_items(token: str = Depends(oauth2_scheme)):
+async def read_items(token: str = Depends(oauth2_scheme)) -> dict:
     return {"token": token}
