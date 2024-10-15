@@ -56,3 +56,6 @@ logger-objects = ["src.library.logger.LOGGER"]
 
 [tool.ruff.lint.pylint]
 max-args = 6
+
+[tool.rye.scripts]
+item = { cmd = "uvicorn item:app --reload" }
